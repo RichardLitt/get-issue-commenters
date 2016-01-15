@@ -24,9 +24,7 @@ module.exports = function (opts) {
       page: 1,
       since: opts.since
     })
-  }).then(function (response) {
-    return _.flatten(response)
-  }).map(function (response) {
+  }).then(_.flatten.bind(_)).map(function (response) {
     if (moment(response.updatedAt).isAfter(opts.since)) {
       return response.user.login
     }
