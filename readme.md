@@ -17,19 +17,20 @@ $ npm install --save get-issue-commenters
 ```js
 const getIssueCommenters = require('get-issue-commenters');
 
-getIssueCommenters({
-    org: 'ipfs',
-    since: '2016-01-15T00:20:24Z'
+getIssueCommenters('ipfs', {
+    since: '2016-01-15T00:20:24Z',
+    repo: 'ipfs'
   });
 //=> RichardLitt
+     ...
 ```
 
 
 ## API
 
-### getIssueCommenters(options)
+### getIssueCommenters(org, options)
 
-#### options.org
+#### org
 
 Type: `string`
 
@@ -41,6 +42,12 @@ Type: `string`
 
 The ISO date from which to get comments that have been made.
 
+#### options.repo
+
+Type: `string`
+
+A repo to search for issues from.
+
 ## CLI
 
 ```
@@ -50,14 +57,17 @@ $ npm install --global get-issue-commenters
 ```
 $ get-issue-commenters --help
 
-  Usage
-    get-issue-commenters [org] [since]
+    Usage
+      $ get-issue-commenters <input>
 
-  Examples
-    $ get-issue-commenters ipfs 2016-01-15T00:20:24Z
-    RichardLitt
+    Options
+      -s, --since Add a time since
+      -r, --repo  Search in a specific repo
+
+    Examples
+      $ get-issue-commenters RichardLit --since=2016-01-15T00:20:24Z --repo=get-issue-commenters
+
 ```
-
 
 ## License
 
