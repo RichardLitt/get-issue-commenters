@@ -1,6 +1,6 @@
 {
   "name": "get-issue-commenters",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Get users who comment on issues for OS GitHub Repos",
   "license": "MIT",
   "repository": "RichardLitt/get-issue-commenters",
