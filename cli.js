@@ -11,20 +11,22 @@ const cli = meow(`
 
     Options
       -s, --since Add a time since
+      -u, --until Add a time to
       -r, --repo  Search in a specific repo
 
     Examples
-      $ get-issue-commenters RichardLit --since=2016-01-15T00:20:24Z --repo=get-issue-commenters
+      $ get-issue-commenters RichardLitt --since=2016-01-15T00:20:24Z --until=2016-01-20T00:20:24Z --repo=get-issue-commenters
 
 `, {
     alias: {
         r: 'repo',
-        s: 'since'
+        s: 'since',
+        u: 'until'
     }
 });
 
 Promise.try(function () {
   return getIssueCommenters(cli.input[0], cli.flags)
-}).map(function (response) {
+}).map((response) => {
   console.log(response)
 })

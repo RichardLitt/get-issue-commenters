@@ -19,6 +19,7 @@ const getIssueCommenters = require('get-issue-commenters');
 
 getIssueCommenters('ipfs', {
     since: '2016-01-15T00:20:24Z',
+    until: '2016-01-20T00:20:24Z',
     repo: 'ipfs'
   });
 //=> RichardLitt
@@ -42,6 +43,12 @@ Type: `string`
 
 The ISO date from which to get comments that have been made.
 
+#### options.until
+
+Type: `string`
+
+The ISO date to which to get comments that have been made.
+
 #### options.repo
 
 Type: `string`
@@ -62,10 +69,11 @@ $ get-issue-commenters --help
 
     Options
       -s, --since Add a time since
+      -u, --until Add a time to
       -r, --repo  Search in a specific repo
 
     Examples
-      $ get-issue-commenters RichardLit --since=2016-01-15T00:20:24Z --repo=get-issue-commenters
+      $ get-issue-commenters RichardLitt --since=2016-01-15T00:20:24Z --until=2016-01-20T00:20:24Z --repo=get-issue-commenters
 
 ```
 
