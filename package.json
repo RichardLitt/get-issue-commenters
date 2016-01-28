@@ -1,6 +1,6 @@
 {
   "name": "get-issue-commenters",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get users who comment on issues for OS GitHub Repos",
   "license": "MIT",
   "repository": "RichardLitt/get-issue-commenters",
@@ -56,7 +56,7 @@
     ]
   },
   "coordinates": [
-    42.3890995,
-    -71.1201899
+    42.3890878,
+    -71.1202162
   ]
 }
