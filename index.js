@@ -11,7 +11,6 @@ const depaginate = require('depaginate')
 const getGithubUser = require('get-github-user')
 
 module.exports = function (org, flags) {
-
   function getAllRepos (org, flags) {
     return Promise.resolve(getGithubUser(org))
     .then((user) => {
@@ -54,10 +53,10 @@ module.exports = function (org, flags) {
   }
 
   if (flags.since && !moment(flags.since).isValid()) {
-    throw 'Since flag is an invalid date.'
+    throw new Error('Since flag is an invalid date.')
   }
   if (flags.until && !moment(flags.until).isValid()) {
-    throw 'Until flag is an invalid date.'
+    throw new Error('Until flag is an invalid date.')
   }
 
   return Promise.resolve()
@@ -74,7 +73,7 @@ module.exports = function (org, flags) {
     }
   })
   .map(response => response.user.login)
-  .then(response =>_.uniq(_.without(response, undefined)))
+  .then(response => _.uniq(_.without(response, undefined)))
   .catch(function (err) {
     console.log('err', err)
   })

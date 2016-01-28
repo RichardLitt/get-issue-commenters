@@ -22,7 +22,6 @@ test('Get results for valid time', t => {
   })
 })
 
-
 test('Get results for valid between', t => {
   return fn('RichardLitt', {
     since: '2016-01-15T15:21:08.104Z',
@@ -32,7 +31,6 @@ test('Get results for valid between', t => {
     t.same(result, ['RichardLitt'])
   })
 })
-
 
 test('Get no results for short between', t => {
   return fn('RichardLitt', {

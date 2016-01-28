@@ -18,12 +18,12 @@ const cli = meow(`
       $ get-issue-commenters RichardLitt --since=2016-01-15T00:20:24Z --until=2016-01-20T00:20:24Z --repo=get-issue-commenters
 
 `, {
-    alias: {
-        r: 'repo',
-        s: 'since',
-        u: 'until'
-    }
-});
+  alias: {
+    r: 'repo',
+    s: 'since',
+    u: 'until'
+  }
+})
 
 Promise.try(function () {
   return getIssueCommenters(cli.input[0], cli.flags)
