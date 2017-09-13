@@ -1,5 +1,7 @@
 # get-issue-commenters [![Build Status](https://travis-ci.org/RichardLitt/get-issue-commenters.svg?branch=master)](https://travis-ci.org/RichardLitt/get-issue-commenters)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/get-issue-commenters.svg)](https://greenkeeper.io/)
+
 > Get users who comment on issues for OS GitHub Repos
 
 This module returns a list of GitHub usernames who have commented on issues for open source GitHub repositories in a specified organization.
